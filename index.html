@@ -2,21 +2,58 @@
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
-    <title>Kuiz – Jeronim De Rada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Jeronim De Rada</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div class="container">
-    <h2>Kuiz – Jeronim De Rada</h2>
+    <div class="quiz-container">
+        <h1>Quiz: Jeronim De Rada</h1>
 
-    <div id="quiz"></div>
+        <!-- Username -->
+        <div id="username-container">
+            <input type="text" id="username" placeholder="Shkruaj username">
+            <button id="startBtn">Start Quiz</button>
+        </div>
 
-    <button onclick="kontrollo()">Dërgo përgjigjet</button>
+        <!-- Quiz -->
+        <div id="quiz" class="hidden">
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="timer">30</div>
+            <h2 id="question"></h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">Opsioni A</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">Opsioni B</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">Opsioni C</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text">Opsioni D</label>
+                </li>
+            </ul>
+            <button id="submit">Submit</button>
+        </div>
 
-    <div id="result"></div>
-</div>
+        <!-- Result -->
+        <div id="result" class="hidden"></div>
 
-<script src="script.js"></script>
+        <!-- Leaderboard -->
+        <div id="leaderboard" class="hidden">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
